@@ -7,7 +7,17 @@ class Comments extends Component {
     return (
       <div>
         <h2>Comments Component</h2>
-        <Link to='/5'>Next</Link>
+        <div className="card">
+          <div className="cardContentParent">
+            <div className="cardContentChild">
+              <h4 className="cardQuestion">Any comments you want to leave?</h4>
+              <input type="text" placeholder="Enter comments" />
+            </div>
+          </div>
+          <div className="cardFooter">
+            <Link to='/5'>Next</Link>
+          </div>
+        </div>
       </div>
     );
   }

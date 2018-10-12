@@ -7,7 +7,14 @@ class Confirmation extends Component {
     return (
       <div>
         <h2>Confirmation Component</h2>
-        <Link to='/'>Leave New Feedback</Link>
+        <div className="card">
+          <div className="cardContentParent">
+            <div className="cardContentChild">
+              <h4 className="cardQuestion">Thank You!</h4>
+              <Link to='/'>Leave New Feedback</Link>            
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
