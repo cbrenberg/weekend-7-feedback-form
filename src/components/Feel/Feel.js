@@ -7,7 +7,19 @@ class Feel extends Component {
     return (
       <div>
         <h2>Feel Component</h2>
-        <Link to='/2'>Next</Link>
+        <div className="card">
+          <div className="cardContentParent">
+            <div className="cardContentChild">
+              <h4 className="cardQuestion">How are you feeling today?</h4>
+              <input type="number" placeholder="1 - 5" />
+            </div>
+          </div>
+          <div className="cardFooter">
+            <Link to='/2'>Next</Link>
+          </div>
+        </div>
+
+
       </div>
     );
   }

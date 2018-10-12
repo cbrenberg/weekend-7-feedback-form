@@ -17,3 +17,25 @@
   font-size: large;
 }
 
+.card {
+  width: 50vw;
+  margin: auto;
+  height: 50vh;
+  box-shadow: 2px 2px 4px 2px darkgray;
+  margin-top: 5vh;
+}
+
+.cardContentParent {
+  background-color: lightblue;
+  height: 80%;
+}
+
+.cardContentChild {
+  position: relative;
+  height: 55%;
+  width: 70%;
+  margin: auto;
+  top: 10%;
+  background-color: white;
+  padding: 5%;
+}
