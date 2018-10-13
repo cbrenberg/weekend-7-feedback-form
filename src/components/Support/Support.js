@@ -29,11 +29,11 @@ class Support extends Component {
           <div className="cardContentParent">
             <div className="cardContentChild">
               <h4 className="cardQuestion">How well are you being supported?</h4>
-              <input type="number" placeholder="1 - 5" value={this.state.support} onChange={this.handleChange}/>
+              <input autofocus type="number" placeholder="1 - 5" value={this.state.support} onChange={this.handleChange}/>
             </div>
           </div>
           <div className="cardFooter">
-            <Link to='/4' onClick={this.submit}>Next</Link>
+            <Link to='/4' onClick={this.submit} className="nextViewButton">Next</Link>
           </div>
         </div>
         <pre>{JSON.stringify(this.state, null, 2)}</pre>

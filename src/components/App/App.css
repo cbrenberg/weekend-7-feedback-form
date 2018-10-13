@@ -23,10 +23,12 @@
   height: 50vh;
   box-shadow: 2px 2px 4px 2px darkgray;
   margin-top: 5vh;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .cardContentParent {
-  background-color: lightblue;
+  background-color: #0359e446;
   height: 40vh;
 }
 
@@ -38,4 +40,26 @@
   top: 5vh;
   background-color: white;
   padding: 20px;
+  border-radius: 5px;
+}
+
+.nextViewButton {
+  position: relative;
+  height: 25px;
+  width: 50px;
+  background-color: #032f76;
+  color: white;
+  font-size: 1.2rem;
+  padding: .5rem 2rem;
+  border-radius: 3px;
+  text-decoration: none;
+  box-shadow: 1px 1px 1px 2px darkgray;
+  top: 3vh;
+  left: 17vw;
+}
+
+.nextViewButton:active {
+  box-shadow: 1px 1px 1px darkgray;
+  top: 3.1vh;
+  left: calc(100% + .1vw);
 }

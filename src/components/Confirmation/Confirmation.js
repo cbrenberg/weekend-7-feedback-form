@@ -5,18 +5,26 @@ import axios from 'axios';
 
 class Confirmation extends Component {
 
-componentDidMount() {
-  axios({
-    method: 'POST', 
-    url: '/feedback',
-    data: this.props.feedbackItem,
-  }).then((response) => {
-    console.log('Feedback Created', response)
-    this.props.feedbackItem = {};
-  }).catch(error => {
-    console.log('Error creating feedback', error);
-  })
-}
+  clearState = () => {
+    this.props.dispatch({
+      type: 'CLEAR_STATE',
+      payload: {},
+    })
+  }
+
+
+  componentDidMount() {
+    axios({
+      method: 'POST', 
+      url: '/feedback',
+      data: this.props.feedbackItem,
+    }).then((response) => {
+      console.log('Feedback Created', response)
+      this.clearState();
+    }).catch(error => {
+      console.log('Error creating feedback', error);
+    })
+  }
 
   render() {
     return (

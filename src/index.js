@@ -19,6 +19,8 @@ const feedbackItem = (state={}, action) => {
       return { ...state, support: action.payload };
     case 'ADD_COMMENTS':
       return {...state, comments: action.payload};
+    case 'CLEAR_STATE':
+      return {};
     default:
       return state;
   }

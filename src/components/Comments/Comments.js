@@ -28,11 +28,11 @@ class Comments extends Component {
           <div className="cardContentParent">
             <div className="cardContentChild">
               <h4 className="cardQuestion">Any comments you want to leave?</h4>
-              <input type="text" placeholder="Enter comments" value={this.state.comments} onChange={this.handleChange}/>
+              <input autofocus type="text" placeholder="Enter comments" value={this.state.comments} onChange={this.handleChange}/>
             </div>
           </div>
           <div className="cardFooter">
-            <Link to='/5' onClick={this.submit}>Next</Link>
+            <Link to='/5' onClick={this.submit} className="nextViewButton">Next</Link>
           </div>
         </div>
         <pre>{JSON.stringify(this.state, null, 2)}</pre>
