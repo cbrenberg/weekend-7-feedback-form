@@ -30,11 +30,11 @@ class Feel extends Component {
           <div className="cardContentParent">
             <div className="cardContentChild">
               <h4 className="cardQuestion">How are you feeling today?</h4>
-              <input autofocus type="number" value={this.state.feeling} onChange={this.handleChange} placeholder="1 - 5" />
+              <input autoFocus type="number" value={this.state.feeling} onChange={this.handleChange} placeholder="1 - 5" />
             </div>
           </div>
           <div className="cardFooter">
-            <Link to='/2' onClick={this.submitFeel} className="nextViewButton">Next</Link>
+            <Link to='/2' onClick={this.submitFeel} className="nextViewButton navButton">Next</Link>
           </div>
         </div>
         <pre>{JSON.stringify(this.state, null, 2)}</pre>

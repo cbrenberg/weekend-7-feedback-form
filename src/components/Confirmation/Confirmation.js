@@ -34,7 +34,7 @@ class Confirmation extends Component {
           <div className="cardContentParent">
             <div className="cardContentChild">
               <h4 className="cardQuestion">Thank You!</h4>
-              <Link to='/'>Leave New Feedback</Link>            
+              <Link to='/' className="navButton">Leave New Feedback</Link>            
             </div>
           </div>
         </div>

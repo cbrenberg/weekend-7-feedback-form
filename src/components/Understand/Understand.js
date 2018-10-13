@@ -29,11 +29,11 @@ class Understand extends Component {
           <div className="cardContentParent">
             <div className="cardContentChild">
               <h4 className="cardQuestion">How well did you understand today's content?</h4>
-              <input autofocus type="number" placeholder="1 - 5" value={this.state.understanding} onChange={this.handleChange}/>
+              <input autoFocus type="number" placeholder="1 - 5" value={this.state.understanding} onChange={this.handleChange}/>
             </div>
           </div>
           <div className="cardFooter">
-            <Link to='/3' onClick={this.submit} className="nextViewButton">Next</Link>
+            <Link to='/3' onClick={this.submit} className="nextViewButton navButton">Next</Link>
           </div>
         </div>
         <pre>{JSON.stringify(this.state, null, 2)}</pre>
