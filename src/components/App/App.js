@@ -32,12 +32,13 @@ class App extends Component {
 
 
           <br />
+          <pre>{JSON.stringify(this.props, null, 2)}</pre>
         </div>
       </Router>
     );
   }
 }
 
-const mapStateToProps = (state) => ({ state });
+const mapStateToProps = ({feedbackItem}) => ({ feedbackItem });
 
 export default connect(mapStateToProps)(App);

@@ -3,6 +3,23 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 class Comments extends Component {
+  state = {
+    comments: '',
+  }
+
+  handleChange = (event) => {
+    this.setState({
+      comments: event.target.value,
+    })
+  }
+
+  submit = () => {
+    this.props.dispatch({
+      type: 'ADD_COMMENTS',
+      payload: this.state.comments,
+    })
+  }
+
   render() {
     return (
       <div>
@@ -11,13 +28,14 @@ class Comments extends Component {
           <div className="cardContentParent">
             <div className="cardContentChild">
               <h4 className="cardQuestion">Any comments you want to leave?</h4>
-              <input type="text" placeholder="Enter comments" />
+              <input type="text" placeholder="Enter comments" value={this.state.comments} onChange={this.handleChange}/>
             </div>
           </div>
           <div className="cardFooter">
-            <Link to='/5'>Next</Link>
+            <Link to='/5' onClick={this.submit}>Next</Link>
           </div>
         </div>
+        <pre>{JSON.stringify(this.state, null, 2)}</pre>
       </div>
     );
   }

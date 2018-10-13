@@ -3,6 +3,24 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 class Support extends Component {
+
+  state = {
+    support: '',
+  }
+
+  handleChange = (event) => {
+    this.setState({
+      support: event.target.value,
+    })
+  }
+
+  submit = () => {
+    this.props.dispatch({
+      type: 'ADD_SUPPORT',
+      payload: this.state.support,
+    })
+  }
+
   render() {
     return (
       <div>
@@ -11,13 +29,14 @@ class Support extends Component {
           <div className="cardContentParent">
             <div className="cardContentChild">
               <h4 className="cardQuestion">How well are you being supported?</h4>
-              <input type="number" placeholder="1 - 5" />
+              <input type="number" placeholder="1 - 5" value={this.state.support} onChange={this.handleChange}/>
             </div>
           </div>
           <div className="cardFooter">
-            <Link to='/4'>Next</Link>
+            <Link to='/4' onClick={this.submit}>Next</Link>
           </div>
         </div>
+        <pre>{JSON.stringify(this.state, null, 2)}</pre>
       </div>
     );
   }

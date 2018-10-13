@@ -3,6 +3,25 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 class Feel extends Component {
+
+  state = {
+    feeling: '',
+  }
+
+  handleChange = (event) => {
+    this.setState({
+      feeling: event.target.value,
+    })
+  }
+
+  submitFeel = () => {
+    this.props.dispatch({
+      type: 'ADD_FEEL',
+      payload: this.state.feeling,
+    })
+  }
+
+
   render() {
     return (
       <div>
@@ -11,14 +30,14 @@ class Feel extends Component {
           <div className="cardContentParent">
             <div className="cardContentChild">
               <h4 className="cardQuestion">How are you feeling today?</h4>
-              <input type="number" placeholder="1 - 5" />
+              <input type="number" value={this.state.feeling} onChange={this.handleChange} placeholder="1 - 5" />
             </div>
           </div>
           <div className="cardFooter">
-            <Link to='/2'>Next</Link>
+            <Link to='/2' onClick={this.submitFeel}>Next</Link>
           </div>
         </div>
-
+        <pre>{JSON.stringify(this.state, null, 2)}</pre>
 
       </div>
     );

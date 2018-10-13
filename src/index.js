@@ -9,7 +9,19 @@ import logger from 'redux-logger';
 
 //reducer functions below
 const feedbackItem = (state={}, action) => {
-  return state;
+
+  switch (action.type) {
+    case 'ADD_FEEL':
+      return {...state, feeling: action.payload};
+    case 'ADD_UNDERSTAND':
+      return {...state, understanding: action.payload};
+    case 'ADD_SUPPORT':
+      return { ...state, support: action.payload };
+    case 'ADD_COMMENTS':
+      return {...state, comments: action.payload};
+    default:
+      return state;
+  }
 }
 
 
