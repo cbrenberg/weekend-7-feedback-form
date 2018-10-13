@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
 
 router.get('/', (req, res) => {
   console.log('/feedback GET hit');
-  pool.query(`SELECT * FROM "feedback"`)
+  pool.query(`SELECT * FROM "feedback" ORDER BY "date" DESC`)
     .then(results => {
       res.send(results.rows);
     })

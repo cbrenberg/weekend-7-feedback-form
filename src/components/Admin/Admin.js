@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import ReactTable from 'react-table';
 import 'react-table/react-table.css';
+import './Admin.css'
 
 class Admin extends Component {
 

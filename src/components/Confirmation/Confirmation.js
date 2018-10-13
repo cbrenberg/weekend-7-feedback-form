@@ -12,6 +12,7 @@ componentDidMount() {
     data: this.props.feedbackItem,
   }).then((response) => {
     console.log('Feedback Created', response)
+    this.props.feedbackItem = {};
   }).catch(error => {
     console.log('Error creating feedback', error);
   })
