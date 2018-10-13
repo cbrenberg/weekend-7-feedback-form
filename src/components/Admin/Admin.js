@@ -64,7 +64,10 @@ class Admin extends Component {
             },
             {
               Header: "Delete",
-              accessor: "<button onClick={() => this.deleteFeedback(item.id)}>Delete</button>",
+              accessor: "id",
+              Cell: row => (
+                <button onClick={() => this.deleteFeedback(row.value)}>Delete</button>
+              )
             },
           ]}
           defaultPageSize={10}
