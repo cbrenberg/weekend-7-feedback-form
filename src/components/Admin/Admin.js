@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import ReactTable from 'react-table';
+import 'react-table/react-table.css';
 
 class Admin extends Component {
 
@@ -40,30 +42,35 @@ class Admin extends Component {
     return (
       <div>
         <h2>Admin Component</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Feeling</th>
-              <th>Comprehension</th>
-              <th>Support</th>
-              <th>Comments</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.feedbackList.map((item) => {
-              return (
-                <tr key={item.id}>
-                  <td>{item.feeling}</td>
-                  <td>{item.understanding}</td>
-                  <td>{item.support}</td>
-                  <td>{item.comments}</td>
-                  <td><button onClick={() => this.deleteFeedback(item.id)}>Delete</button></td>
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
+
+        <ReactTable
+          data={this.state.feedbackList}
+          columns={[
+            {
+              Header: "Feeling",
+              accessor: "feeling",
+            },
+            {
+              Header: "Comprehension",
+              accessor: "understanding",
+            },
+            {
+              Header: "Support",
+              accessor: "support",
+            },
+            {
+              Header: "Comments",
+              accessor: "comments",
+            },
+            {
+              Header: "Delete",
+              accessor: "<button onClick={() => this.deleteFeedback(item.id)}>Delete</button>",
+            },
+          ]}
+          defaultPageSize={10}
+          className="-striped -highlight"
+          />
+
         {/* <pre>{JSON.stringify(this.state, null, 2)}</pre> */}
       </div>
     );
