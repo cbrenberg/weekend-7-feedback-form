@@ -21,6 +21,10 @@ class Feel extends Component {
     })
   }
 
+  componentDidMount() {
+    document.getElementById('progressBar').value = '0';
+  }
+
 
   render() {
     return (

@@ -20,6 +20,11 @@ class Understand extends Component {
       payload: this.state.understanding,
     })
   }
+
+  componentDidMount() {
+    document.getElementById('progressBar').value = '25';
+  }
+
   render() {
     return (
       <div>

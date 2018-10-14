@@ -20,6 +20,10 @@ class Comments extends Component {
     })
   }
 
+  componentDidMount() {
+    document.getElementById('progressBar').value = '75';
+  }
+
   render() {
     return (
       <div>

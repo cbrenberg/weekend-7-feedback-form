@@ -14,6 +14,7 @@ class Confirmation extends Component {
 
 
   componentDidMount() {
+    document.getElementById('progressBar').value = '100';
     axios({
       method: 'POST', 
       url: '/feedback',

@@ -21,6 +21,10 @@ class Support extends Component {
     })
   }
 
+  componentDidMount() {
+    document.getElementById('progressBar').value = '50';
+  }
+
   render() {
     return (
       <div>

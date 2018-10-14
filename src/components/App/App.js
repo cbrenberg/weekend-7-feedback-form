@@ -22,7 +22,7 @@ class App extends Component {
             <h1 className="App-title">Feedback!</h1>
           </header>
 
-          <progress max="100" value="0"></progress>
+          <progress id="progressBar" max="100" value="20"></progress>
 
           <Route exact path="/" component={Feel} />
           <Route path="/2" component={Understand} />
