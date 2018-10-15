@@ -54,18 +54,23 @@ class Admin extends Component {
             {
               Header: "Feeling",
               accessor: "feeling",
+              width: 150,
             },
             {
               Header: "Comprehension",
               accessor: "understanding",
+              width: 150,
             },
             {
               Header: "Support",
               accessor: "support",
+              width: 150,
             },
             {
               Header: "Comments",
               accessor: "comments",
+              style: { 'white-space': 'unset' },
+              minWidth: 500,
             },
             {
               Header: "Delete",
