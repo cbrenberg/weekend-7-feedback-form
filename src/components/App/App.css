@@ -1,16 +1,20 @@
 .App {
   text-align: center;
+  background-color: whitesmoke;
+  font-family: Roboto, Segoe UI, Tahoma, sans-serif;
+  height: 100vh;
 }
 
 .App-header {
-  background-color: #033076;
+  background-color: #2E3F4F;
   min-height: 70px;
   padding: 20px;
   color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 3rem;
+  margin: 2vh 0;
 }
 
 .App-intro {
@@ -28,7 +32,7 @@
 }
 
 .cardContentParent {
-  background-color: #0359e446;
+  background-color: #DCD799;
   height: 40vh;
 }
 
@@ -43,9 +47,13 @@
   border-radius: 5px;
 }
 
+.cardQuestion {
+  font-size: 1.5rem;
+}
+
 .navButton {
   height: 25px;
-  background-color: #032f76;
+  background-color: #E56D4A;
   color: white;
   font-size: 1.2rem;
   padding: .5rem 2rem;
@@ -67,7 +75,7 @@
 }
 
 progress {
-  height: 2rem;
+  height: 1.5rem;
   background-color: darkgray;
   width: 100%;
 }
@@ -78,6 +86,17 @@ progress::-webkit-progress-bar {
 }
 progress::-webkit-progress-value {
   /* style rules */
-  background-color: rgba(28, 184, 28, 0.89);
+  background-color: #489C85;
   transition: width 1s;
+}
+
+input, textarea {
+  font-size: 1.5rem;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+textarea {
+  max-width: 90%;
+  max-height: 50%;
 }

@@ -27,16 +27,15 @@ class Comments extends Component {
   render() {
     return (
       <div>
-        <h2>Comments Component</h2>
         <div className="card">
           <div className="cardContentParent">
             <div className="cardContentChild">
               <h4 className="cardQuestion">Any comments you want to leave?</h4>
-              <input autoFocus type="text" placeholder="Enter comments" value={this.state.comments} onChange={this.handleChange}/>
+              <textarea autoFocus type="text" placeholder="Enter comments" value={this.state.comments} onChange={this.handleChange}/>
             </div>
           </div>
           <div className="cardFooter">
-            <Link to='/5' onClick={this.submit} className="nextViewButton navButton">Next</Link>
+            <Link to='/5' onClick={this.submit} className="nextViewButton navButton">Submit</Link>
           </div>
         </div>
         <pre>{JSON.stringify(this.state, null, 2)}</pre>

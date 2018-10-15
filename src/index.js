@@ -6,6 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import logger from 'redux-logger';
+import 'typeface-roboto';
 
 //reducer functions below
 const feedbackItem = (state={}, action) => {

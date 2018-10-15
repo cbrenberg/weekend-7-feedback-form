@@ -28,7 +28,6 @@ class Support extends Component {
   render() {
     return (
       <div>
-        <h2>Support Component</h2>
         <div className="card">
           <div className="cardContentParent">
             <div className="cardContentChild">

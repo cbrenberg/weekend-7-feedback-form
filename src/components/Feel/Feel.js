@@ -29,12 +29,11 @@ class Feel extends Component {
   render() {
     return (
       <div>
-        <h2>Feel Component</h2>
         <div className="card">
           <div className="cardContentParent">
             <div className="cardContentChild">
               <h4 className="cardQuestion">How are you feeling today?</h4>
-              <input autoFocus type="number" value={this.state.feeling} onChange={this.handleChange} placeholder="1 - 5" />
+              <input required autoFocus type="number" value={this.state.feeling} onChange={this.handleChange} placeholder="1 - 5" />
             </div>
           </div>
           <div className="cardFooter">

@@ -28,8 +28,6 @@ class Understand extends Component {
   render() {
     return (
       <div>
-        <h2>Understand Component</h2>
-
         <div className="card">
           <div className="cardContentParent">
             <div className="cardContentChild">

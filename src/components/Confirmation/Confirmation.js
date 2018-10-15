@@ -30,7 +30,6 @@ class Confirmation extends Component {
   render() {
     return (
       <div>
-        <h2>Confirmation Component</h2>
         <div className="card">
           <div className="cardContentParent">
             <div className="cardContentChild">
