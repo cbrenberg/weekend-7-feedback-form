@@ -15,24 +15,28 @@ class Admin extends Component {
     axios.get('/feedback')
       .then((response) => {
         console.log('Back from GET with', response);
-        this.setState({feedbackList: response.data})
+        this.setState({ feedbackList: response.data })
       })
-      .catch(error=>console.log('Error getting feedback', error));
+      .catch(error => console.log('Error getting feedback', error));
   }
 
   deleteFeedback = (id) => {
-    axios({
-      method: 'DELETE',
-      url: '/feedback',
-      params: {
-        id: id,
-      }
-    })
-      .then(() => {
-        console.log('Item deleted');
-        this.getFeedback();
+    if (window.confirm('Are you sure? This action cannot be undone.')) {
+      axios({
+        method: 'DELETE',
+        url: '/feedback',
+        params: {
+          id: id,
+        }
       })
-      .catch(error=>console.log('Error deleting item', error));
+        .then(() => {
+          console.log('Item deleted');
+          this.getFeedback();
+        })
+        .catch(error => console.log('Error deleting item', error));
+    } else {
+      return;
+    };
   }
 
   componentDidMount() {
@@ -73,7 +77,7 @@ class Admin extends Component {
           ]}
           defaultPageSize={10}
           className="-striped -highlight"
-          />
+        />
 
         {/* <pre>{JSON.stringify(this.state, null, 2)}</pre> */}
       </div>

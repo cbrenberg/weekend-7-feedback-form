@@ -15,7 +15,7 @@ class Support extends Component {
   }
 
   submit = (event) => {
-    if (this.state.feeling < 1 || this.state.feeling > 5) {
+    if (this.state.support < 1 || this.state.support > 5) {
       event.preventDefault();
       alert('Please enter a value between 1 and 5');
       return;
