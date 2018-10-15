@@ -81,11 +81,9 @@ progress {
 }
 
 progress::-webkit-progress-bar {
-  /* style rules */
   background-color: gainsboro;
 }
 progress::-webkit-progress-value {
-  /* style rules */
   background-color: #489C85;
   transition: width 1s;
 }

@@ -15,7 +15,9 @@ class Feel extends Component {
   }
 
   submitFeel = (event) => {
+    //stop form progression if not between 1 and 5
     if (this.state.feeling < 1 || this.state.feeling > 5) {
+      //stop link in its tracks
       event.preventDefault();
       alert('Please enter a value between 1 and 5');
       return;

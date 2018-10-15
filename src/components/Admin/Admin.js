@@ -21,6 +21,7 @@ class Admin extends Component {
   }
 
   deleteFeedback = (id) => {
+    //alert user prior to deleting data
     if (window.confirm('Are you sure? This action cannot be undone.')) {
       axios({
         method: 'DELETE',
@@ -40,6 +41,7 @@ class Admin extends Component {
   }
 
   componentDidMount() {
+    //populate table on component mount
     this.getFeedback();
   }
 

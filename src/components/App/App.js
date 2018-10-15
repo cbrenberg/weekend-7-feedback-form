@@ -21,8 +21,8 @@ class App extends Component {
           <header className="App-header">
             <h1 className="App-title">Feedback!</h1>
           </header>
-
-          <progress id="progressBar" max="100" value="20"></progress>
+          {/* progress bar initializes at 0% progress*/}
+          <progress id="progressBar" max="100" value="0"></progress>
 
           <Route exact path="/" component={Feel} />
           <Route path="/2" component={Understand} />

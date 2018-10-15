@@ -21,6 +21,7 @@ class Comments extends Component {
   }
 
   componentDidMount() {
+    //moves progress bar to 75%
     document.getElementById('progressBar').value = '75';
   }
 

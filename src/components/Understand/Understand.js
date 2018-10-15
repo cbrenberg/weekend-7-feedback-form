@@ -15,7 +15,9 @@ class Understand extends Component {
   }
 
   submit = (event) => {
+    //stop form progression if not between 1 and 5
     if (this.state.understanding < 1 || this.state.understanding > 5) {
+      //stop link in its tracks
       event.preventDefault();
       alert('Please enter a value between 1 and 5');
       return;
