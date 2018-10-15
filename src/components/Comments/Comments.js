@@ -38,7 +38,7 @@ class Comments extends Component {
             <Link to='/5' onClick={this.submit} className="nextViewButton navButton">Submit</Link>
           </div>
         </div>
-        <pre>{JSON.stringify(this.state, null, 2)}</pre>
+        {/* <pre>{JSON.stringify(this.state, null, 2)}</pre> */}
       </div>
     );
   }

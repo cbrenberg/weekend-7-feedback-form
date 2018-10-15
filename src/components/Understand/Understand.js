@@ -14,7 +14,12 @@ class Understand extends Component {
     })
   }
 
-  submit = () => {
+  submit = (event) => {
+    if (this.state.feeling < 1 || this.state.feeling > 5) {
+      event.preventDefault();
+      alert('Please enter a value between 1 and 5');
+      return;
+    }
     this.props.dispatch({
       type: 'ADD_UNDERSTAND',
       payload: this.state.understanding,
@@ -39,7 +44,7 @@ class Understand extends Component {
             <Link to='/3' onClick={this.submit} className="nextViewButton navButton">Next</Link>
           </div>
         </div>
-        <pre>{JSON.stringify(this.state, null, 2)}</pre>
+        {/* <pre>{JSON.stringify(this.state, null, 2)}</pre> */}
 
       </div>
     );

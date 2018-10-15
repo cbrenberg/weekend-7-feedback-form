@@ -90,13 +90,27 @@ progress::-webkit-progress-value {
   transition: width 1s;
 }
 
-input, textarea {
+.cardContentChild input, textarea {
   font-size: 1.5rem;
   padding: 4px;
   border-radius: 5px;
 }
 
-textarea {
+.cardContentChild textarea {
   max-width: 90%;
   max-height: 50%;
+}
+
+.deleteButton {
+  height: 100%;
+  width: 8rem;
+  margin-top: 0%;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  border: 1px solid darkgray;
+}
+.deleteButton:hover {
+  background-color: darkgray;
+  cursor: pointer;
 }

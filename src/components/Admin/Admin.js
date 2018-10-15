@@ -42,7 +42,7 @@ class Admin extends Component {
   render() {
     return (
       <div>
-        <h2>Admin Component</h2>
+        <h2>Feedback Results</h2>
 
         <ReactTable
           data={this.state.feedbackList}
@@ -67,7 +67,7 @@ class Admin extends Component {
               Header: "Delete",
               accessor: "id",
               Cell: row => (
-                <button onClick={() => this.deleteFeedback(row.value)}>Delete</button>
+                <button className="deleteButton" onClick={() => this.deleteFeedback(row.value)}>Delete</button>
               )
             },
           ]}
